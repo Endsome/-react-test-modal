@@ -1,0 +1,28 @@
+@import "./helpers/_variables.scss";
+
+.btn-upload {
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: none;
+  background-color: $c-light;
+  cursor: pointer;
+  transition: background-color .2s;
+
+  &:hover {
+    background-color: $c-tertiary;
+  }
+
+  &__title {
+    color: $c-primary;
+  }
+
+  .icon-upload {
+    width: 16px;
+    height: 16px;
+    fill: $c-primary;
+    margin-right: 8px;
+  }
+}

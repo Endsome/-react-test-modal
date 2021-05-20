@@ -1,0 +1,64 @@
+@import "./helpers/_variables.scss";
+
+.custom-select {
+  position: relative;
+  border: 1px solid $c-gray-light;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-size: 14px;
+
+  &:hover,
+  &.open {
+    border-color: $c-primary;
+  }
+
+  select {
+    display: none;
+  }
+}
+
+.select-selected {
+  &:after {
+    position: absolute;
+    content: "";
+    top: 16px;
+    right: 17px;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-color: $c-dark transparent transparent transparent;
+    border-radius: 4px;
+  }
+
+  &.select-arrow-active:after {
+    border-color: transparent transparent $c-dark transparent;
+    top: 10px;
+  }
+}
+
+.select-items div,
+.select-selected {
+  padding: 8px 16px;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+.select-items {
+  position: absolute;
+  background-color: #fff;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  z-index: 99;
+  box-shadow: 0 0 12px #E1E5F0;
+  padding: 8px 10px;
+}
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: #F9FAFC;
+  border-radius: 4px;
+}

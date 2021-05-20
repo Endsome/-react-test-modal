@@ -1,0 +1,30 @@
+@import "./helpers/_variables.scss";
+
+.input,
+.textarea {
+  box-sizing: border-box;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid $c-gray-light;
+  width: 100%;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 14px;
+  outline: none;
+
+  &:focus {
+    border-color: $c-primary;
+
+    &::placeholder {
+      color: rgba(137,142,163,.4);
+    }
+  }
+}
+
+.input {
+  height: 40px;
+}
+
+.textarea {
+  height: 90px;
+  resize: none;
+}
